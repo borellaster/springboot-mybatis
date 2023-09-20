@@ -1,3 +1,0 @@
-dba cria o user na base (base pronta)
-acesso a mais de uma base
-avaliação de segurança

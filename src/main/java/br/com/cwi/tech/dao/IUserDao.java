@@ -1,4 +1,4 @@
-package br.com.cwi.tech.mapper;
+package br.com.cwi.tech.dao;
 
 import br.com.cwi.tech.domain.User;
 import org.apache.ibatis.annotations.*;
@@ -6,7 +6,7 @@ import org.apache.ibatis.annotations.*;
 import java.util.List;
 
 @Mapper
-public interface UserMapper {
+public interface IUserDao {
 
     @Select("SELECT * FROM users")
     List<User> getUser();

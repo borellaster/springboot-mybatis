@@ -7,11 +7,9 @@ import lombok.AllArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class State {
+public class Country {
 
     private Integer id;
     private String name;
-    private String abbreviation;
-    private Country country;
 
 }

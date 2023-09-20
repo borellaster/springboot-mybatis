@@ -10,6 +10,17 @@ WITH (
 );
 ALTER TABLE Users OWNER TO postgres;
 
+CREATE TABLE pais
+(
+  codigo BIGSERIAL NOT NULL,
+  nome CHARACTER VARYING(100) NOT NULL,
+  CONSTRAINT Pais_Pkey PRIMARY KEY (codigo)
+)
+WITH (
+  OIDS=FALSE
+);
+ALTER TABLE pais OWNER TO postgres;
+
 CREATE TABLE estado
 (
   codigo BIGSERIAL NOT NULL,
@@ -21,3 +32,6 @@ WITH (
   OIDS=FALSE
 );
 ALTER TABLE estado OWNER TO postgres;
+
+ALTER TABLE estado ADD COLUMN pais_codigo bigint;
+ALTER TABLE estado ADD CONSTRAINT FK_pais_PLAIN FOREIGN KEY (pais_codigo) REFERENCES pais (codigo);

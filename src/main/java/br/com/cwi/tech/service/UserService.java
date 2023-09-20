@@ -1,7 +1,7 @@
 package br.com.cwi.tech.service;
 
 import br.com.cwi.tech.domain.User;
-import br.com.cwi.tech.mapper.UserMapper;
+import br.com.cwi.tech.dao.IUserDao;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -11,21 +11,21 @@ import java.util.List;
 public class UserService {
 
     @Autowired
-    private UserMapper mapper;
+    private IUserDao dao;
 
     public List<User> getUser(){
-        return this.mapper.getUser();
+        return this.dao.getUser();
     }
 
     public int insertUser(User user) {
-        return this.mapper.insertUser(user);
+        return this.dao.insertUser(user);
     }
 
     public int updateUser(User user) {
-        return this.mapper.updateUser(user);
+        return this.dao.updateUser(user);
     }
 
     public int deleteUser(Integer id) {
-        return this.mapper.deleteUser(id);
+        return this.dao.deleteUser(id);
     }
 }

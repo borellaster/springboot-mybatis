@@ -1,7 +1,6 @@
 package br.com.cwi.tech.controller;
 
 import br.com.cwi.tech.domain.User;
-import br.com.cwi.tech.mapper.UserMapper;
 import br.com.cwi.tech.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
