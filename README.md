@@ -1,6 +1,6 @@
 # Nome do Projeto
 
-Descrição breve do projeto.
+LAB Integração Springboot + MyNatis + Postgres
 
 ## Tecnologias utilizadas
 
@@ -22,14 +22,16 @@ Antes de iniciar o projeto, certifique-se de ter as seguintes ferramentas instal
 
 2. **Configurar PostgreSQL**:
 
-Após instalar o PostgreSQL, crie uma base de dados e ajuste as configurações no arquivo `src/main/resources/application.properties`.
+Após instalar o PostgreSQL, crie uma base de dados e ajuste as configurações no arquivo `src/main/resources/application.yml`.
 
-`spring.datasource.url=jdbc:postgresql://localhost:5432/nomedobanco`
-
-`spring.datasource.username=seu_usuario`
-
-`spring.datasource.password=sua_senha`
-
+```yaml
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost/NomeBanco
+    username: Username
+    password: Password
+    driver-class-name: org.postgresql.Driver
+```
 
 3. **Importar o projeto no IntelliJ**:
 
@@ -45,20 +47,10 @@ Acesse a classe principal (geralmente nomeada `NomeDoProjetoApplication.java`) e
 
 No terminal, navegue até o diretório do projeto e execute:
 
-
-## Endpoints
-
-[Liste aqui os principais endpoints da sua API, caso seja relevante.]
-
-## Contribuições
-
-Instruções sobre como contribuir para o projeto, se aplicável.
-
-## Licença
-
-Informações sobre a licença, se aplicável.
+`./mvnw spring-boot:run`
 
 ## Contato e autores
 
-Informações de contato dos autores e contribuidores.
+Felipe Borella 
+borellaster@gmail.com
 
