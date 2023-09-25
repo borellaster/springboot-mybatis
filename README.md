@@ -1,6 +1,6 @@
 # Nome do Projeto
 
-LAB Integração Springboot + MyNatis + Postgres
+LAB Integração Springboot + MyBatis + Postgres
 
 ## Tecnologias utilizadas
 
